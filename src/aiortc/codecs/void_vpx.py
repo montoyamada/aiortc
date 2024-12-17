@@ -3,13 +3,13 @@ import random
 from struct import pack, unpack_from
 from typing import List, Tuple, Type, TypeVar, cast
 
-from av import VideoFrame
-from av.frame import Frame
-from av.packet import Packet
+#from av import VideoFrame
+#from av.frame import Frame
+#from av.packet import Packet
 
 from ..jitterbuffer import JitterFrame
 from ..mediastreams import VIDEO_CLOCK_RATE, VIDEO_TIME_BASE, convert_timebase
-from ._vpx import ffi, lib
+#from ._vpx import ffi, lib
 from .base import Decoder, Encoder
 
 DEFAULT_BITRATE = 500000  # 500 kbps

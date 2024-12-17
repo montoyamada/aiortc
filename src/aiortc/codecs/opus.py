@@ -1,9 +1,9 @@
 import fractions
 from typing import List, Tuple
 
-from av import AudioFrame, AudioResampler
-from av.frame import Frame
-from av.packet import Packet
+#from av import AudioFrame, AudioResampler
+#from av.frame import Frame
+#from av.packet import Packet
 
 from ..jitterbuffer import JitterFrame
 from ..mediastreams import convert_timebase

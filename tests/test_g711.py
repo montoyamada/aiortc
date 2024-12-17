@@ -5,7 +5,7 @@ from aiortc.codecs import PCMA_CODEC, PCMU_CODEC, get_decoder, get_encoder
 from aiortc.codecs.g711 import PcmaDecoder, PcmaEncoder, PcmuDecoder, PcmuEncoder
 from aiortc.jitterbuffer import JitterFrame
 
-from .codecs import CodecTestCase
+from .void_codecs import CodecTestCase
 
 # silence
 PCMA_PAYLOAD = b"\xd5" * 160

@@ -11,7 +11,7 @@ from unittest.mock import patch
 from aiortc.contrib.media import MediaBlackhole, MediaPlayer, MediaRecorder, MediaRelay
 from aiortc.mediastreams import AudioStreamTrack, MediaStreamError, VideoStreamTrack
 
-from .codecs import CodecTestCase
+from .void_codecs import CodecTestCase
 from .utils import asynctest
 
 

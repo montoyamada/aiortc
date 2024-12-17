@@ -11,7 +11,7 @@ from aiortc.codecs.vpx import (
 )
 from aiortc.rtcrtpparameters import RTCRtpCodecParameters
 
-from .codecs import CodecTestCase
+from .void_codecs import CodecTestCase
 
 VP8_CODEC = RTCRtpCodecParameters(
     mimeType="video/VP8", clockRate=90000, payloadType=100

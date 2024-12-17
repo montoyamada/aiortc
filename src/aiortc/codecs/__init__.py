@@ -10,10 +10,10 @@ from ..rtcrtpparameters import (
     RTCRtpHeaderExtensionParameters,
 )
 from .base import Decoder, Encoder
-from .g711 import PcmaDecoder, PcmaEncoder, PcmuDecoder, PcmuEncoder
-from .h264 import H264Decoder, H264Encoder, h264_depayload
+from .void_g711 import PcmaDecoder, PcmaEncoder, PcmuDecoder, PcmuEncoder
+#from .h264 import H264Decoder, H264Encoder, h264_depayload
 from .opus import OpusDecoder, OpusEncoder
-from .vpx import Vp8Decoder, Vp8Encoder, vp8_depayload
+from .void_vpx import Vp8Decoder, Vp8Encoder, vp8_depayload
 
 PCMU_CODEC = RTCRtpCodecParameters(
     mimeType="audio/PCMU", clockRate=8000, channels=1, payloadType=0
@@ -98,12 +98,13 @@ def init_codecs() -> None:
 
 
 def depayload(codec: RTCRtpCodecParameters, payload: bytes) -> bytes:
-    if codec.name == "VP8":
-        return vp8_depayload(payload)
-    elif codec.name == "H264":
-        return h264_depayload(payload)
-    else:
-        return payload
+    #if codec.name == "VP8":
+    #    return vp8_depayload(payload)
+    #elif codec.name == "H264":
+    #    return h264_depayload(payload)
+    #else:
+    #    return payload
+    return payload
 
 
 def get_capabilities(kind: str) -> RTCRtpCapabilities:
@@ -147,10 +148,10 @@ def get_decoder(codec: RTCRtpCodecParameters) -> Decoder:
         return PcmaDecoder()
     elif mimeType == "audio/pcmu":
         return PcmuDecoder()
-    elif mimeType == "video/h264":
-        return H264Decoder()
-    elif mimeType == "video/vp8":
-        return Vp8Decoder()
+    #elif mimeType == "video/h264":
+    #    return H264Decoder()
+    #elif mimeType == "video/vp8":
+    #    return Vp8Decoder()
     else:
         raise ValueError(f"No decoder found for MIME type `{mimeType}`")
 
@@ -164,10 +165,10 @@ def get_encoder(codec: RTCRtpCodecParameters) -> Encoder:
         return PcmaEncoder()
     elif mimeType == "audio/pcmu":
         return PcmuEncoder()
-    elif mimeType == "video/h264":
-        return H264Encoder()
-    elif mimeType == "video/vp8":
-        return Vp8Encoder()
+    #elif mimeType == "video/h264":
+    #    return H264Encoder()
+    #elif mimeType == "video/vp8":
+    #    return Vp8Encoder()
     else:
         raise ValueError(f"No encoder found for MIME type `{mimeType}`")
 

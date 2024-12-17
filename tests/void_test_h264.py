@@ -7,9 +7,9 @@ from aiortc.codecs import get_decoder, get_encoder, h264
 from aiortc.codecs.h264 import H264Decoder, H264Encoder, H264PayloadDescriptor
 from aiortc.jitterbuffer import JitterFrame
 from aiortc.rtcrtpparameters import RTCRtpCodecParameters
-from av import Packet
+#from av import Packet
 
-from .codecs import CodecTestCase
+from .void_codecs import CodecTestCase
 from .utils import load
 
 H264_CODEC = RTCRtpCodecParameters(

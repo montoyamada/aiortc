@@ -5,7 +5,7 @@ from aiortc.codecs.opus import OpusDecoder, OpusEncoder
 from aiortc.jitterbuffer import JitterFrame
 from aiortc.rtcrtpparameters import RTCRtpCodecParameters
 
-from .codecs import CodecTestCase
+from .void_codecs import CodecTestCase
 
 OPUS_CODEC = RTCRtpCodecParameters(
     mimeType="audio/opus", clockRate=48000, channels=2, payloadType=100

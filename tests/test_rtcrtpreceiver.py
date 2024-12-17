@@ -28,7 +28,7 @@ from aiortc.rtp import RtcpPacket, RtpPacket
 from aiortc.stats import RTCStatsReport
 from aiortc.utils import uint16_add
 
-from .codecs import CodecTestCase
+from .void_codecs import CodecTestCase
 from .utils import ClosedDtlsTransport, asynctest, dummy_dtls_transport_pair, load
 
 VP8_CODEC = RTCRtpCodecParameters(

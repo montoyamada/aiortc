@@ -4,8 +4,8 @@ from unittest import TestCase
 from aiortc.codecs import depayload, get_decoder, get_encoder
 from aiortc.jitterbuffer import JitterFrame
 from aiortc.mediastreams import AUDIO_PTIME, VIDEO_TIME_BASE
-from av import AudioFrame, VideoFrame
-from av.packet import Packet
+#from av import AudioFrame, VideoFrame
+#from av.packet import Packet
 
 
 class CodecTestCase(TestCase):
