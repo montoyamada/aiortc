@@ -1,7 +1,7 @@
 # ruff: noqa: F401
 import logging
 
-import av.logging
+#import av.logging
 
 from .exceptions import InvalidAccessError, InvalidStateError
 from .mediastreams import AudioStreamTrack, MediaStreamTrack, VideoStreamTrack
